@@ -1,32 +1,40 @@
+ /* global $ */
 
+module.exports = {
+      print,
+      getSumProduct,
+      getDate,
+      getDateIn120Seconds,
+      attachExclamation,
+}
 
 function print(text){
   console.log(text);
 }
 
 function getSumProduct(){
-  function add(){
+      function add(){
       var num1=document.form.text1.value;
       var num2=document.form.text2.value;
-      var sum=Number(num1)+Number(num2);
+      document.getElementById("result").innerHTML=Number(num1)+Number(num2);
       }
       function divide(){
       var num1=document.form.text1.value;
       var num2=document.form.text2.value;
-      var sum=Number(num1)/Number(num2);
+      document.getElementById("result").innerHTML=Number(num1)/Number(num2);
       }
       function product(){
       var num1=document.form.text1.value;
       var num2=document.form.text2.value;
-      var sum=Number(num1)*Number(num2);
+      document.getElementById("result").innerHTML=Number(num1)*Number(num2);
       }
       function modulus(){
       var num1=document.form.text1.value;
       var num2=document.form.text2.value;
-      var sum=Number(num1)%Number(num2);
+      document.getElementById("result").innerHTML=Number(num1)%Number(num2);
 }}
 
-function getDate {
+function getDate() {
       var today = new Date();
       var dd = today.getDate();
       var mm = today.getMonth()+1; //January is 0!

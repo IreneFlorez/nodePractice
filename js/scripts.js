@@ -1,13 +1,3 @@
-// /* global $ */
-
-$( document ).ready( function () {
- console.log("ehllo world");
-});
-
-
-
-
-
-$.getScript('library.js', function(){
-
-});
+const library = require("./library.js");
+library.print(library.getDate());
+library.print(library.getDateIn120Seconds());
