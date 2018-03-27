@@ -61,6 +61,45 @@ function attachExclamation(text){
       return text + "!";
 }
 
+
+
+function findMean(numbersArray){
+      var length = numbersArray.length;
+      var total=0;
+
+      for (var i=0; i < length; i++) {
+            total += numbersArray[i];
+      }
+      var mean = total / length; 
+      return mean;
+}
+
+function sortNumbers(a,b){
+      return a-b;
+}
+
+function findMedian(numbersArray){
+    var length = numbersArray.length;
+    var median = 0; 
+    numbersArray.sortNumbers();
+ 
+    if (length % 2 == 0 // is even
+          ) {
+             let mid = length/2;
+             console.log(mid);//check
+             let median = Math.round((numbersArray[mid-1]+numbersArray[mid])/2);
+             //return median;
+          } else { // is odd
+              // middle number only
+             let middle = Math.round(length/2);
+             let median = numbersArray[middle-1];
+             console.log(middle);//check
+    }
+    return median;
+}
+//see also https://jonlabelle.com/snippets/view/javascript/calculate-mean-median-mode-and-range-in-javascript
+//see also https://byjus.com/mean-median-mode-formula
+  
 //document.write(today);
 
 // <script>
