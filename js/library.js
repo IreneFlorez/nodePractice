@@ -13,7 +13,7 @@ module.exports = {
 
 function randomLotteryGenerator(){
       var ticket = [];
-      for(var i=0; i<5; i++){
+      for(var i=0; i<6; i++){
             
             var randomNumber = Math.floor(Math.random()*56)+1;
             var runLoop = true;
