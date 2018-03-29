@@ -8,6 +8,27 @@ module.exports = {
       findMean,
       sortNumbers,
       findMedian,
+      ticket: randomLotteryGenerator
+}
+
+function randomLotteryGenerator(){
+      var ticket = [];
+      for(var i=0; i<5; i++){
+            
+            var randomNumber = Math.floor(Math.random()*56)+1;
+            var runLoop = true;
+            
+            while(runLoop){
+                  if (ticket.includes(randomNumber)){
+                        randomNumber = Math.floor(Math.random()*56)+1;
+                  } else {
+                        ticket.push(randomNumber);
+                        runLoop = false;
+                  }
+            }
+      }
+      ticket.sort(sortNumbers);
+      return ticket;
 }
 
 function print(text){
